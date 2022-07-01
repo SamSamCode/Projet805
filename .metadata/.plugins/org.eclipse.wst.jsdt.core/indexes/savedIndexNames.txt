@@ -1,0 +1,7 @@
+INDEX VERSION 1.4+C:\Users\berti\Documents\Master\RT0805_Prog_repartie\Repo\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+2568615341.index
+3810843977.index
+34751491.index
+1554816287.index
+3408049259.index
+1054760071.index

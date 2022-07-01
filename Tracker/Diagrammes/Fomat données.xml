@@ -1,0 +1,40 @@
+<traqueur>
+	<sport nom="moto cross">
+		<enregistrement>
+			<identifiant sport> 1 <\identifiant sport>
+			<date> 10/05/22 <\date>
+			<heure debut> 10h00 </heure debut>
+			<heure fin> 10h15 </heure fin>
+			<sport pratique> moto cross </sport pratique>
+			<liste point gps> 
+				<point gps heure="10h00"> Reims centre <\point gps>
+				<point gps heure="10h05"> Reims est <\point gps>
+				<point gps heure="10h15"> Reims sud <\point gps> 
+			</liste point gps>
+		</enregistrement>
+	</sport>
+	<sport nom="football">
+		<enregistrement>
+			<identifiant sport> 2 <\identifiant sport>
+			<date> 10/05/22 <\date>
+			<heure debut> 8h00 </heure debut>
+			<heure fin> 9h30 </heure fin>
+			<sport pratique> football </sport pratique>
+			<liste point gps> 
+				<point gps heure="8h00"> millieu de terrain<\point gps>
+				<point gps heure="8h23"> but adverse <\point gps>
+				<point gps heure="9h00"> corner <\point gps> 
+			</liste point gps>
+		</enregistrement>
+		<enregistrement>
+			<identifiant sport> 2 <\identifiant sport>
+			<date> 08/05/22 <\date>
+			<heure debut> 11h00 </heure debut>
+			<heure fin> 12h30 </heure fin>
+			<sport pratique> football </sport pratique>
+			<liste point gps> 
+				<point gps heure="8h00"> aile droite <\point gps> 
+			</liste point gps>
+		</enregistrement>
+	</sport>
+</traqueur>

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Accueil</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link rel="stylesheet" media="screen" type="text/css" title="mon style"
+	href="MenuHorizontal2.css">
+<style>
+body {
+	margin-left: 0;
+	margin-right: 0;
+}
+
+#page {
+	min-height: 100%;
+	width: 750px;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 1.5em;
+	font-family: Calibri, Times New Roman, Arial, Verdana, Times, sans-serif;
+	font-size: 1.1em;
+	border-style: ridge;
+	border-width: 5px;
+	border-color: #FAAC58;
+	background-color: rgb(200, 120, 25);
+}
+
+#footer {
+	color: #FAAC58;
+	text-align: center;
+	font-family: Calibri, Times New Roman, Bookman Old Style, sans-serif;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	height: 20px;
+}
+
+#blocmenu {
+	/* height: 36px; */
+	font-size: 1.0em;
+	font-family: Calibri, Times New Roman, Bookman Old Style, sans-serif;
+	background-color: #585858;
+	padding-left: 120px;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+#menu {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+#menu li {
+	float: left;
+	list-style-type: none;
+}
+
+#menu li a, #menu li a:visited {
+	padding: 10px;
+	line-height: 35px;
+	font-size: 18px;
+	text-decoration: none;
+	color: #FAAC58;
+}
+
+#menu li a:hover {
+	background-color: #FAAC58;
+	color: white;
+}
+
+#corps {
+	padding: 1.0em;
+	margin-top: 10px;
+	padding-top: 2px;
+	overflow: hidden;
+	text-align: center;
+	color: white;
+}
+
+#corps h2 {
+	padding: 1.1em;
+	margin-top: 10px;
+	padding-top: 2px;
+	overflow: hidden;
+	text-align: center;
+	font-size: 18px;
+}
+
+ul {
+	list-style-type: none;
+}
+
+li {
+	list-style-type: none;
+}
+</style>
+</head>
+<body>
+	<div id="page">
+		<div id="banniere_image">
+			<h1>Accueil Tracker</h1>
+		</div>
+
+		<jsp:include page="header.jsp" />
+
+		<div id="corps">
+			<h3>Localisation</h3>
+	
+			<div id="map" style="height: 500px;"></div>
+
+			<!-- <iframe
+				src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d83334.62913416838!2d3.9848967290274016!3d49.25351927714438!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e974334a533b09%3A0x40a5fb99a3b45c0!2s51100%20Reims!5e0!3m2!1sfr!2sfr!4v1656147283752!5m2!1sfr!2sfr"
+				width="600" height="450" style="border: 0;" allowfullscreen=""
+				loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+			</iframe> -->
+		</div>
+		<jsp:include page="footer.html" />
+	</div>
+
+
+	<script type="text/javascript">
+	function showLocationOnMap (location) {
+		if(location == null) {
+			location.latitude = 49.2501982817528;
+			location.longitude = 4.072811017133269;
+		}
+	    var map;
+	    map = new google.maps.Map(document.getElementById('map'), {
+	      center: {
+	        lat: Number(location.latitude), 
+	        lng: Number(location.longitude)},
+	        zoom: 15
+	    });
+	    var marker = new google.maps.Marker({
+	      position: {
+	        lat: Number(location.latitude), 
+	        lng: Number(location.longitude)},
+	        map: map,
+	        title: 
+	          "Public IP:"+location.ipAddress
+	            +" @ "+location.city
+	    });   
+	}
+	</script>
+
+	<script
+		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initMap&v=weekly"
+		defer></script>
+	<script type="text/javascript">
+	/**
+	 * @license
+	 * Copyright 2019 Google LLC. All Rights Reserved.
+	 * SPDX-License-Identifier: Apache-2.0
+	 */
+	function initMap(latitude, longitude) {
+	 if(latitude != null && longitude != null) {
+		 latLng = {lat: latitude, lng:longitude}; 
+	 } else {
+		 latLng = { lat: 49.2501982817528, lng: 4.072811017133269 };
+	 } 
+		
+	 const map = new google.maps.Map(document.getElementById("map"), {
+	   zoom: 13,
+	   center: latLng,
+	 });
+
+	  new google.maps.Marker({
+	    position: latLng,
+	    map,
+	    title: "Hello World!",
+	  });
+	}
+
+	window.initMap = initMap;
+
+	</script>
+</body>
+</html>

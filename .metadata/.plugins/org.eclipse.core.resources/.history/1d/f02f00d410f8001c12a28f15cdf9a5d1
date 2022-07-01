@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>
+			CreationSport
+		</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+		
+		<link rel="stylesheet" href="<%=request.getContextPath()%>/resources/css/main.css" />
+		
+	</head>
+	<body>
+		<div id="page">
+			<div id="banniere_image">
+				<h1>Creation Tracker</h1>
+			</div>
+			 <jsp:include page="header.jsp" />
+			 
+			<form action="CreerSport" method="post">
+				<div id="corps">
+					<h3>Espace de creation</h3>
+				   	<label for="nomSport"><strong>Nom du sport</strong></label>
+			        <input type="text" placeholder="Nom du sport" name="nomSport" required>
+			        <br/><br/>
+			        <button type="submit">Ajout</button>
+				</div>
+			</form>
+			<div id="footer">
+				Projet Charlier Kevin | Bertin Samuel.
+			</div>
+			
+			<jsp:include page="footer.html" />
+		</div>
+	</body>
+</html>

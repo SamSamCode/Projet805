@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app
+    xmlns="http://java.sun.com/xml/ns/javaee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+    version="3.0">
+  <display-name>Archetype Created Web Application</display-name>
+  <servlet>
+  	<servlet-name>LoginServlet</servlet-name>
+
+  	<description></description>
+  	<servlet-class>LoginServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>Connexion</servlet-name>
+  	<display-name>Connexion</display-name>
+  	<description></description>
+  	<servlet-class>Connexion</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>CreerSport</servlet-name>
+  	<display-name>CreerSport</display-name>
+  	<description></description>
+  	<servlet-class>CreerSport</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>Traque</servlet-name>
+  	<display-name>Traque</display-name>
+  	<description></description>
+  	<servlet-class>Traque</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>LoginServlet</servlet-name>
+  	<url-pattern>/LoginServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>Connexion</servlet-name>
+  	<url-pattern>/Connexion</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>CreerSport</servlet-name>
+  	<url-pattern>/CreerSport</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>Traque</servlet-name>
+  	<url-pattern>/Traque</url-pattern>
+  </servlet-mapping>
+</web-app>

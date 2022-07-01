@@ -1,0 +1,20 @@
+
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+
+    <h1>
+        <c:out value="${param.something}" />
+    </h1>
+
+
+<div id="banniere_image">
+	
+	<h1>Performances</h1>
+</div>
+<div id="blocmenu">
+    <ul id="menu">
+    <li><a href="/Tracker/Accueil.jsp">Accueil</a></li>
+    <li><a href="/Tracker/CreerUnSport.jsp">Creer un sport</a></li>
+    <li><a href="/Tracker/Traque.jsp">Commencer une traque</a></li>
+    <li><a href="/Tracker/Performance.jsp">Consulter performances</a></li>
+    </ul>
+</div>
